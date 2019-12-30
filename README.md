@@ -4,8 +4,6 @@ RocketMQ学习：从HelloWorld到最佳实践
 
 ## 1、[核心概念](http://rocketmq.apache.org/docs/core-concept/)
 
-![](https://img2018.cnblogs.com/blog/955136/201912/955136-20191231050208751-2049335974.png)
-
 1. NameServer：一个简易的注册中心，保存Broker的路由信息。只要有两个功能：Broker管理和Routing管理。客户端从NameServer获取Broker路由信息，从而得知该与哪些Broker连接，发送和消费消息。
 2. Broker：消息服务实体，负责消息接收、存储和处理来自消费者的拉取请求。它还存储与消息相关的元数据，包括使用者组，使用者进度偏移量和主题/队列信息。
 3. Producer：消息生产者，将业务应用程序系统生成的消息发送给Broker。提供多种发送方式：同步，异步和单向。
